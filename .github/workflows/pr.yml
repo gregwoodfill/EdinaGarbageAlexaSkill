@@ -19,8 +19,8 @@ jobs:
           poetry install
       - name: lint
         run: |
-          flake8 edina_garbage --show-source --statistics
-          flake8 tests --show-source --statistics
+          poetry run flake8 edina_garbage --show-source --statistics
+          poetry run flake8 tests --show-source --statistics
       - name: pytest
         run: |
-          pytest
+          poetry run pytest
