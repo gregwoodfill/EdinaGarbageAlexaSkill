@@ -4,28 +4,31 @@ set -euf -o pipefail
 echo "check if poetry exists"
 poetry -V
 
-echo "activating venv"
-poetry shell
-
 echo "installing pip dependencies"
 poetry install
 
 echo "autoformat main"
-autopep8 -i -r edina_garbage
+poetry run autopep8 -i -r edina_garbage
 
 echo "autoformat test"
-autopep8 -i -r tests
+poetry run autopep8 -i -r tests
 
 echo "linting main"
-flake8 edina_garbage
+poetry run flake8 edina_garbage
 
 echo "linting tests"
-flake8 tests
+poetry run flake8 tests
 
 echo "running tests"
-pytest
+poetry run pytest
 
 echo "packaging"
 bin/package
+
+echo "format and validate tf"
+pushd infrastructure
+    terraform fmt
+    terraform validate
+popd
 
 echo "Ready to go!"

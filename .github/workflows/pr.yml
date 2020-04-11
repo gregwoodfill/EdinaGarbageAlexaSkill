@@ -30,7 +30,7 @@ jobs:
     steps:
       - name: checkout project
         uses: actions/checkout@v2
-      - name: set up terraform
+      - name: verify terraform
         uses: hashicorp/terraform-github-actions@master
         with:
           tf_actions_version: 0.12.13
