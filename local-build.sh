@@ -1,8 +1,11 @@
 #!/bin/bash
 set -euf -o pipefail
 
+echo "check if poetry exists"
+poetry -V
+
 echo "activating venv"
-. venv/bin/activate
+poetry shell
 
 echo "installing pip dependencies"
 poetry install
