@@ -10,3 +10,5 @@ infrastructure/lambda_function.zip
 .idea
 .vscode
 **/*.iml
+
+*.egg-info

@@ -5,7 +5,7 @@ echo "activating venv"
 . venv/bin/activate
 
 echo "installing pip dependencies"
-pip install -q -r requirements.txt
+poetry install
 
 echo "autoformat main"
 autopep8 -i -r edina_garbage
@@ -22,4 +22,7 @@ flake8 tests
 echo "running tests"
 pytest
 
-echo "everything looks good"
+echo "packaging"
+bin/package
+
+echo "Ready to go!"
