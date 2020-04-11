@@ -3,19 +3,19 @@ provider "aws" {
 }
 
 resource "aws_lambda_permission" "default" {
-  statement_id = "AllowExecutionFromAlexa"
-  action = "lambda:InvokeFunction"
+  statement_id  = "AllowExecutionFromAlexa"
+  action        = "lambda:InvokeFunction"
   function_name = aws_lambda_function.default.function_name
-  principal = "alexa-appkit.amazon.com"
+  principal     = "alexa-appkit.amazon.com"
 }
 
 resource "aws_lambda_function" "default" {
-  filename = "lambda_function.zip"
+  filename         = "lambda_function.zip"
   source_code_hash = filebase64sha256("lambda_function.zip")
-  function_name = "terraform_lambda_alexa_example"
-  role = aws_iam_role.default.arn
-  handler = "edina_garbage.lambda_handler"
-  runtime = "python3.8"
+  function_name    = "terraform_lambda_alexa_example"
+  role             = aws_iam_role.default.arn
+  handler          = "edina_garbage.lambda_handler"
+  runtime          = "python3.8"
 }
 
 resource "aws_iam_role" "default" {
