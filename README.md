@@ -1,5 +1,7 @@
 # Alexa Skill to Get Garbage Schedule for Edina
 
+![branch build](https://github.com/gregwoodfill/EdinaGarbageAlexaSkill/workflows/branch%20build/badge.svg)
+
 ## Set Up
 
 intall pyenv
