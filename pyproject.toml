@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "edina_garbage"
+version = "0.0.1"
+description = "lambda for telling what day garbage comes in edina"
+authors = ["Greg Woodfill <greg@gregwoodfill.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.4.1"
+flake8 = "^3.7.9"
+autopep8 = "^1.5.1"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

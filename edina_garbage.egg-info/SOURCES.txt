@@ -1,0 +1,7 @@
+setup.py
+edina_garbage/__init__.py
+edina_garbage/handler.py
+edina_garbage.egg-info/PKG-INFO
+edina_garbage.egg-info/SOURCES.txt
+edina_garbage.egg-info/dependency_links.txt
+edina_garbage.egg-info/top_level.txt

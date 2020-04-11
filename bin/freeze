@@ -1,5 +1,0 @@
-#!/bin/bash
-
-set -euf -o pipefail
-
-pip freeze > requirements.txt

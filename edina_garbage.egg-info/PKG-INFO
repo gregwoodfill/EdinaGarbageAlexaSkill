@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: edina-garbage
+Version: 0.0.1
+Summary: lambda for telling what day garbage comes in edina
+Home-page: UNKNOWN
+Author: Greg Woodfill
+Author-email: greg@gregwoodfill.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.8,<4.0
