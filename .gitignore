@@ -1,6 +1,6 @@
 venv/
 infrastructure/lambda_function.zip
-infrastructure/terraform.tfstate
+**/*tfstate*
 
 # cache files
 **/.terraform
