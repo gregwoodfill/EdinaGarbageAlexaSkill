@@ -2,6 +2,16 @@ provider "aws" {
   region = "us-east-2"
 }
 
+terraform {
+  backend "s3" {
+    encrypt        = "true"
+    bucket         = "gjw-terraform-state-s3"
+    region         = "us-east-2"
+    key            = "tf/state/edina-garbage.tfstate"
+    dynamodb_table = "terraform-state-lock-dynamo"
+  }
+}
+
 resource "aws_lambda_permission" "default" {
   statement_id  = "AllowExecutionFromAlexa"
   action        = "lambda:InvokeFunction"
@@ -12,7 +22,7 @@ resource "aws_lambda_permission" "default" {
 resource "aws_lambda_function" "default" {
   filename         = "lambda_function.zip"
   source_code_hash = filebase64sha256("lambda_function.zip")
-  function_name    = "terraform_lambda_alexa_example"
+  function_name    = "edina_garbage_alexa_skill"
   role             = aws_iam_role.default.arn
   handler          = "edina_garbage.lambda_handler"
   runtime          = "python3.8"
