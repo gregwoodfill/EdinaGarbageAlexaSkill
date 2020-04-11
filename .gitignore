@@ -1,0 +1,12 @@
+venv/
+infrastructure/lambda_function.zip
+
+# cache files
+**/.terraform
+**/.pytest_cache
+**/__pycache__
+
+# IDE
+.idea
+.vscode
+**/*.iml

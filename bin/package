@@ -1,0 +1,3 @@
+#!/bin/bash
+set -euf -o pipefail
+zip -r infrastructure/lambda_function.zip lambda/

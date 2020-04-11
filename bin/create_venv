@@ -1,0 +1,5 @@
+#!/bin/bash
+set -euf -o pipefail
+
+rm -fr venv/
+virtualenv venv

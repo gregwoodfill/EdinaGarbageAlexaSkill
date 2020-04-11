@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -euf -o pipefail
+
+rm -fr .pytest_cache
+rm -f infrastructure/lambda_function.zip
