@@ -25,7 +25,7 @@ jobs:
         run: |
           poetry run pytest
   terraform:
-    name: terraform-verify
+    name: Terraform Verify
     runs-on: ubuntu-latest
     steps:
       - name: checkout project
