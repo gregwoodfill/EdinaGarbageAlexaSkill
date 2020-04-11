@@ -2,7 +2,7 @@ name: branch build
 on: [push]
 jobs:
   pytest:
-    name: pytest
+    name: Branch Verify
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
