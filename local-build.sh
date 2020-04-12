@@ -22,6 +22,9 @@ poetry run flake8 tests
 echo "running tests"
 poetry run pytest
 
+echo "exporting dependencies to requirements.txt"
+poetry export --dev -f requirements.txt > requirements.txt
+
 echo "packaging"
 bin/package
 
