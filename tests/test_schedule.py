@@ -7,7 +7,9 @@ from edina_garbage.schedule import PickUpWeek
 @pytest.mark.parametrize(
     'pickup_date, expected', [
         (datetime.date(2020, 4, 14), schedule.PickUpWeek.BLUE),
-        (datetime.date(2020, 4, 7), schedule.PickUpWeek.GREY)
+        (datetime.date(2020, 4, 7), schedule.PickUpWeek.GREY),
+        (datetime.date(2020, 9, 16), schedule.PickUpWeek.BLUE),
+        (datetime.date(2020, 12, 2), schedule.PickUpWeek.GREY),
     ]
 )
 def test_color_of_week(pickup_date, expected):
