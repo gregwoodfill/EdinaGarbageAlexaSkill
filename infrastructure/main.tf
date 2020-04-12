@@ -24,7 +24,7 @@ resource "aws_lambda_function" "default" {
   source_code_hash = filebase64sha256("lambda_function.zip")
   function_name    = "edina_garbage_alexa_skill"
   role             = aws_iam_role.default.arn
-  handler          = "edina_garbage.lambda_handler"
+  handler          = "edina_garbage.handler.lambda_handler"
   runtime          = "python3.8"
 }
 
