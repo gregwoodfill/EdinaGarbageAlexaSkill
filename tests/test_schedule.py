@@ -22,7 +22,8 @@ def test_color_of_week_not_before_jan_2020():
 
     with pytest.raises(ValueError) as ve:
         schedule.get_color_for_day(dec_2019)
-        assert str(ve) == ""
+
+    assert str(ve.value) == "Date is too far in the past, pick a future date"
 
 
 def test_flips_color():
